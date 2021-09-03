@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around; /* Puse space-arround porque quedaba mas lindo, pero en el mockapp seria space-between*/
+    align-items: center; 
+    position: sticky;
+}
+
+.segui_conectado{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.segui_conectado img{
+    height: 60%;
+    border-radius: 50%;
+    filter: invert(100%);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.segui_conectado a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*--------------------------------SLIDER------------------------------------*/
+
+.slider_imagenes{
+    background-color: rgb(201, 201, 195);
+    width: 100%;
+    height: 500px;
+}
+
+.priv_arrow, .next_arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    z-index: 999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.priv_arrow i, .next_arrow i{
+    display: flex;
+    margin-top: 7px;
+    justify-content: center;
+}
+
+.priv_arrow{ top: 50%; left: 20px; }
+.next_arrow{ top: 50%; right: 20px; }
+
+.primerproducto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+#product{
+    font-size: 2rem;
+    margin-bottom: -20px;
+}
+#numero_producto{ font-size: 9rem; }
+
+#botoncomprar{
+    background-color: rgb(56, 116, 140);
+    width: 280px;
+    height: 80px;
+    border-radius: 22px;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mancha{
+    position: relative; /* No pude lograr con el position absolute para el responsive la mancha por fuera del contenedor, asi que decidi dejarlo por dentro siendo prolijo */
+    width: 60%;
+    top: 70px;
+}
+
+.titulo_comprar{ margin-left: 50px; }
+
+/*---------------------------ULTIMOS ARTICULOS--------------------------------*/
+
+.segunda_seccion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.segunda_seccion h2{
+    margin-left: 15%;
+    margin-bottom: 30px;
+}
+
+.ultimos_articulos{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.ultimos_articulos .articulo:nth-child(2n){
+    margin-top: 30px;
+}
+
+.articulo{
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid rgba(128, 128, 128, 0.57);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.193);
+}
+
+.articulo:hover{
+    border: 3px solid rgba(128, 128, 128, 0.87);
+}
+
+.articulo:hover > img{
+    opacity: 80%;
+}
+
+.articulo img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.articulo .descripcion{
+    padding: 8px;
+    overflow: hidden;
+}
+
+/*----------------------------FORMULARIO-----------------------------*/
+
+.fomulario{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#separador{
+    width: 100%;
+    margin: 10px 0 50px 0;
+}
+
+.fomulario form{
+    display: grid;
+    width: 600px;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.fomulario form #mail{
+    grid-column: 1 / 3;
+}
+
+input{
+    outline: none;
+    padding: 0 10px;
+}
+
+.container_checkbox{
+    display: flex; 
+    align-items: center;
+    height: 40px;
+}
+
+.container_checkbox > input{
+    line-height: 40px;
+}
+
+.fomulario form input:hover , select:hover{
+    border: 3px solid rgba(128, 128, 128, 0.87);
+    cursor: pointer;
+}
+
+.fomulario form input , select{
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 3px solid rgba(128, 128, 128, 0.57);
+}
+
+#botonenviar{
+    background-color: rgb(56, 116, 140);
+    width: 180px;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+#botonenviar:hover , #botoncomprar:hover{
+    background-color: rgb(40, 94, 116);
+}
+
+.errores{
+    margin-bottom: 40px;
+    color: red;
+    font-size: 1.1rem;
+}
+
+#labelbox{
+    display: flex;
+    align-items: center;
+}
+
+#labelbox p{
+    padding-bottom: 13px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+/*--------------------------------RESPONSIVE DESIGN-------------------------------*/
+
+@media (max-width: 1446px){
+    .ultimos_articulos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ultimos_articulos .articulo:nth-child(2n){
+        margin-top: 0;
+    }
+    .ultimos_articulos .articulo:nth-child(3n+2){
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1108px){
+    .ultimos_articulos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ultimos_articulos .articulo:nth-child(n){
+        margin-top: 0;
+    }
+    .ultimos_articulos .articulo:nth-child(2n){
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 714px){
+    #span_principio{
+        display: none;
+    }
+    .ultimos_articulos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ultimos_articulos .articulo:nth-child(n){
+        margin-top: 0;
+    }
+    .fomulario form{
+        display: grid;
+        width: 400px;
+        gap: 5px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .fomulario form #mail{
+        grid-column: 1 / 1;
+    }
+}
+
+@media (max-width: 378px){
+    .articulo{
+        width: 350px;
+    }
+}

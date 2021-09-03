@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <!--SLIDER-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagenes/mancha.png"> 
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav>
+        <h3>Landing Page</h3>
+        <div class="segui_conectado">
+            <span id="span_principio">SEGUÍ CONECTADO</span>
+            <a href="https://www.facebook.com/WundermanThompson/" target="_blank"><img src="imagenes/facebook_landing_page.png" alt="facebook logo icono"></a>
+        </div>
+    </nav>
+    <div class="slider slider_imagenes">
+        <div class="slide">
+            <div class="primerproducto">
+                <div class="titulo_comprar">
+                    <h2 id="product">PRODUCT</h2>
+                    <h1 id="numero_producto">ONE</h1>
+                    <button id="botoncomprar">COMPRAR</button>
+                </div>
+                <img id="mancha" src="imagenes/mancha.png" alt="">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="primerproducto">
+                <div class="titulo_comprar">
+                    <h2 id="product">PRODUCT</h2>
+                    <h1 id="numero_producto">TWO</h1>
+                    <button id="botoncomprar">COMPRAR</button>
+                </div>
+                <img id="mancha" src="imagenes/mancha.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="segunda_seccion">
+        <h2>Ultimos Articulos</h2>
+        <div class="ultimos_articulos">
+        </div>
+    </div>
+
+    <div class="fomulario">
+        <div class="titulo">
+            <h3>Formulario</h3>
+            <hr id="separador" size="3px" color="rgba(128, 128, 128, 0.57)" />
+        </div>
+        <form action="">
+            <input id="Nombre" type="text" placeholder="Nombre">
+            <input id="Apellido" type="text" placeholder="Apellido">
+            <input id="mail" type="text" placeholder="e-Mail">
+            <select id="Departamento"></select>
+            <select id="Localidad"></select>
+            <input id="cedula" type="text" placeholder="CI">
+            <label for="terminos_y_usos" id="labelbox"><input name="terminos_y_usos" id="terminos_y_usos" type="checkbox"/><p>Aceptar terminos y condiciones</p></label>
+        </form>
+        <button id="botonenviar">Enviar</button>
+        <div class="errores"></div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/a4831842be.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/formulario.js "></script>
+    <script type="text/javascript" src="javascript/datos.js "></script>
+    <script type="text/javascript" src="javascript/logica.js"></script>
+    <script type="text/javascript" src="javascript/slider.js"></script>
+    <script type="text/javascript" src="javascript/ultimos_articulos.js"></script>
+</body>
+</html>
